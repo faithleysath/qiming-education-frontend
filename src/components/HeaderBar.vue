@@ -13,7 +13,7 @@ const props = defineProps({
                 <h3>启明教育平台</h3>
             </RouterLink>
             <slot></slot>
-            <div class="infobox">
+            <div class="infobox" v-show="studentNumber && studentName">
                 <div class="studentNumber" v-show="studentNumber"><font-awesome-icon icon="fa-solid fa-id-card" />{{ studentNumber }}</div>
                 <div class="dropdown">
                     <div class="studentName" v-show="studentName"><font-awesome-icon icon="fa-solid fa-user" />{{ studentName }}</div>
@@ -83,7 +83,9 @@ header {
 .dropdown-content {
     position: absolute;
     top: 23px;
+    left: 50%;
     width: 100%;
+    min-width: 4rem;
     height: 2rem;
     background-color: #f5f5f5;
     color: rgb(33, 53, 71);
@@ -93,7 +95,7 @@ header {
     opacity: 0;
     visibility: hidden;
     transition: all .25s;
-    transform: translateY(-4px);
+    transform: translate(-50%, -4px);
 }
 
 .dropdown:hover .studentName {
@@ -103,7 +105,7 @@ header {
 .dropdown:hover .dropdown-content {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translate(-50%, 0);
 }
 
 .logout {
