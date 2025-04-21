@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
+    logo: String,
+    title: String,
     studentNumber: String,
     studentName: String
 })
@@ -9,8 +11,8 @@ const props = defineProps({
     <header>
         <div class="headerContainer">
             <RouterLink class="logobox" to="/">
-                <img src="/logo.png" alt="logo" class="logo">
-                <h3>启明教育平台</h3>
+                <img :src="logo" alt="logo" class="logo">
+                <h3>{{ title }}</h3>
             </RouterLink>
             <slot></slot>
             <div class="infobox" v-show="studentNumber && studentName">
