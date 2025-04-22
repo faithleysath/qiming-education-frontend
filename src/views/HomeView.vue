@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HeaderBar from '@/components/HeaderBar.vue';
+import FooterBar from '@/components/FooterBar.vue';
 import { reactive } from 'vue';
 
 const menuItems = reactive([
@@ -31,35 +32,61 @@ const menuItems = reactive([
 </script>
 
 <template>
-    <HeaderBar :logo="'/logo.png'" :title="'启明教育平台'" :student-number="'202283250010'" :student-name="'李大师'"></HeaderBar>
-    <div class="HomeContainer">
-        <h1 class="MainTitle">欢迎使用启明教育平台</h1>
-        <ul class="MenuCardGroup">
-            <li class="MenuCard" v-for="menuItem in menuItems">
-                <h2>{{ menuItem.title }}</h2>
-                <span class="MenuDesc">{{ menuItem.desc }}</span>
-                <RouterLink :to="menuItem.buttonUrl">{{ menuItem.buttonText }}</RouterLink>
-            </li>
-        </ul>
+    <div class="PageContent">
+        <main>
+            <HeaderBar :logo="'/logo.png'" :title="'启明教育平台'" :student-number="'202283250010'" :student-name="'李大师'"></HeaderBar>
+            <div class="HomeContainer">
+                <div class="WelcomeSection">
+                    <h1 class="MainTitle">欢迎使用启明教育平台</h1>
+                    <p class="SubTitle">选择下方功能开始你的学习之旅</p>
+                </div>
+                <ul class="MenuCardGroup">
+                    <li class="MenuCard" v-for="menuItem in menuItems">
+                        <h2>{{ menuItem.title }}</h2>
+                        <span class="MenuDesc">{{ menuItem.desc }}</span>
+                        <RouterLink :to="menuItem.buttonUrl">{{ menuItem.buttonText }}</RouterLink>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <FooterBar></FooterBar>
     </div>
 </template>
 
 <style scoped>
+.PageContent {
+    min-height: 100vh;
+    position: relative;
+}
+
+main {
+    padding-bottom: 6.6rem;
+}
+
 .HomeContainer {
     max-width: 1000px;
-    margin: 20px auto;
+    margin: 0 auto;
     text-align: center;
 }
 
 @media (max-width: 1080px) {
     .HomeContainer {
-        margin: 20px 40px;
+        margin: 0 40px;
     }
+}
+
+.WelcomeSection {
+    margin: 40px 0;
+    user-select: none;
 }
 
 .MainTitle {
     color: #1a73e8;
-    
+    margin-bottom: 1rem;
+}
+
+.SubTitle {
+    margin: 0;
 }
 
 .MenuCardGroup {
