@@ -41,16 +41,6 @@
       <VueMarkdown :source="advancedExample" />
     </div>
     
-    <!-- Using slot instead of source prop -->
-    <div class="example-section">
-      <h2>Using Slot Content</h2>
-      <VueMarkdown :show="false">
-        <template #markdown="{ render }">
-          <div v-html="render(slotExample)"></div>
-        </template>
-      </VueMarkdown>
-    </div>
-    
     <!-- Code Highlighting Example -->
     <div class="example-section">
       <h2>Code Highlighting Example</h2>
@@ -342,7 +332,7 @@ print(f"Factorial of 5 is {result}")
 ## Another Table Example
 
 | Feature | Description | Status |
-|---------|-------------|--------|
+|:---------:|:-------------|--------:|
 | Markdown Support | Basic markdown syntax | ✅ |
 | Table Styling | Custom table styling with blue theme | ✅ |
 | Math Expressions | KaTeX integration | ✅ |

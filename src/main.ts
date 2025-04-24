@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import 'normalize.css'
 import '@/style.css'
+import 'katex/dist/katex.min.css'
 import App from '@/App.vue'
 import HomeView from '@/views/HomeView.vue'
 import PracticeView from '@/views/PracticeView.vue'
