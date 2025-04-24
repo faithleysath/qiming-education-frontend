@@ -1,10 +1,10 @@
 <script setup lang="ts">
-defineProps({
-    logo: String,
-    title: String,
-    studentNumber: String,
-    studentName: String
-})
+defineProps<{
+    logo: string;
+    title: string;
+    studentNumber: string;
+    studentName: string;
+}>()
 </script>
 
 <template>

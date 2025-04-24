@@ -11,10 +11,10 @@ const menuItems = reactive([
         buttonUrl : "/practice"
     },
     {
-        title : "测验中心",
-        desc : "查看当前或历史的测验",
-        buttonText : "进入测验",
-        buttonUrl : "/exam"
+        title : "Markdown演示",
+        desc : "VueMarkdown组件的使用示例",
+        buttonText : "查看演示",
+        buttonUrl : "/markdown-demo"
     },
     {
         title : "测验中心",

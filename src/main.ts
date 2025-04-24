@@ -4,6 +4,7 @@ import '@/style.css'
 import App from '@/App.vue'
 import HomeView from '@/views/HomeView.vue'
 import PracticeView from '@/views/PracticeView.vue'
+import MarkdownDemoView from '@/views/MarkdownDemoView.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import { createPinia } from 'pinia'
 
@@ -21,7 +22,8 @@ library.add(faIdCard, faUser, faArrowRightFromBracket)
 
 const routes = [
     { path: '/', component: HomeView },
-    { path: '/practice', component: PracticeView}
+    { path: '/practice', component: PracticeView},
+    { path: '/markdown-demo', component: MarkdownDemoView}
 ]
 
 const router = createRouter({

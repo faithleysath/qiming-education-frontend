@@ -1,10 +1,10 @@
 <script setup lang="ts">
-const props = defineProps({
-    total: {type: Number, required: true},
-    pending: {type: Number, required: true},
-    complete: {type: Number, required: true},
-    width: {type: String, required: true},
-});
+const props = defineProps<{
+    total: number;
+    pending: number;
+    complete: number;
+    width: string;
+}>();
 
 const pendingWidth = props.pending / props.total * 100 + '%';
 const completeWidth = props.complete / props.total * 100 + '%';
@@ -25,7 +25,7 @@ div {
 }
 
 .ProgressBar {
-    background-color: #e0e0e0; /* Lighter background */
+    background-color: #E6E8EB; /* Lighter background */
     position: relative;
     overflow: hidden; /* Hide overflow to prevent visual glitches */
 }
@@ -37,10 +37,10 @@ div {
 }
 
 .PendingBar {
-    background-color: #2979FF; /* Modern blue */
+    background-color: #67C23A; /* Modern blue */
 }
 
 .CompleteBar {
-    background-color: #67C23A; /* Modern green */
+    background-color: rgb(82.4, 155.2, 46.4); /* Modern green */
 }
 </style>
