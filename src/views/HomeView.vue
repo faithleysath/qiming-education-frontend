@@ -54,6 +54,10 @@ const menuItems = reactive([
 </template>
 
 <style scoped>
+h1, h2, h3 {
+    margin: 0;
+}
+
 .PageContent {
     min-height: 100vh;
     position: relative;

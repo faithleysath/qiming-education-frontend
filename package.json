@@ -30,8 +30,10 @@
     "normalize.css": "^8.0.1",
     "pinia": "^3.0.2",
     "prismjs": "^1.30.0",
+    "vditor": "^3.11.0",
     "vue": "^3.5.13",
-    "vue-router": "4"
+    "vue-router": "4",
+    "vue-vditor": "^0.0.7"
   },
   "devDependencies": {
     "@types/markdown-it": "^14.1.2",

@@ -30,6 +30,10 @@ defineProps<{
 
 <style scoped>
 
+h1, h2, h3 {
+    margin: 0;
+}
+
 header {
     width: 100%;
     min-width: 350px;

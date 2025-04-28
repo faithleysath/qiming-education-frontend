@@ -2,12 +2,14 @@ import { createApp } from 'vue'
 import 'normalize.css'
 import '@/style.css'
 import 'katex/dist/katex.min.css'
+import 'vditor/dist/index.css';
 import App from '@/App.vue'
 import HomeView from '@/views/HomeView.vue'
 import PracticeView from '@/views/PracticeView.vue'
 import MarkdownDemoView from '@/views/MarkdownDemoView.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import { createPinia } from 'pinia'
+import VueVditor from 'vue-vditor';
 
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -34,4 +36,4 @@ const router = createRouter({
 
 const pinia = createPinia()
 
-createApp(App).component('font-awesome-icon', FontAwesomeIcon).use(router).use(pinia).mount('#app')
+createApp(App).component('font-awesome-icon', FontAwesomeIcon).use(router).use(pinia).use(VueVditor).mount('#app')

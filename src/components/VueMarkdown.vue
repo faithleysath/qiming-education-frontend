@@ -1,5 +1,5 @@
 <template>
-  <div v-show="show" v-html="renderedContent"></div>
+  <div class="MarkdownBlock" v-show="show" v-html="renderedContent"></div>
 </template>
 
 <script setup lang="ts">
@@ -282,5 +282,9 @@ pre {
 img {
   display: block;
   margin: 0 auto;
+}
+
+p {
+  line-height: 1.5rem;
 }
 </style>

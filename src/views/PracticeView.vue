@@ -38,6 +38,7 @@ main {
 @media (max-width: 880px) {
     .PracticeContainer {
         margin: 0 40px;
+        margin-top: 20px;
     }
 }
 </style>

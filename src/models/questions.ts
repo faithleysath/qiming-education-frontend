@@ -1,7 +1,7 @@
 export interface BaseQuestion {
     id: string;
     text: string;
-    explaination: string;
+    explanation: string;
     difficulty: "easy" | "medium" | "hard";
     topic: string;
     tags: string[];
@@ -16,7 +16,7 @@ export interface JudgementQuestion extends BaseQuestion {
 
 export interface SingleChoiceQuestion extends BaseQuestion {
     type: "single_choice";
-    options: {text: string, isCorrect?: boolean}[];
+    options: {text: string; isCorrect?: boolean}[];
 }
 
 export interface MultipleChoiceQuestion extends BaseQuestion {
